@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQLite Viewer Flask</title>
+</head>
+<body>
+
+    
+    <h1>Projects</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Begin Date</th>
+            <th>End Date</th>
+        </tr>
+
+
+        {% for project in projects %}
+            <tr>
+                <td>{{ project[0] }}</td>
+                <td>{{ project[1] }}</td>
+                <td>{{ project[2] }}</td>
+                <td>{{ project[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+
+
+    <h1>Tasks</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Priority</th>
+            <th>Project ID</th>
+            <th>Status ID</th>
+            <th>Begin Date</th>
+            <th>End Date</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task[0] }}</td>
+                <td>{{ task[1] }}</td>
+                <td>{{ task[2] }}</td>
+                <td>{{ task[3] }}</td>
+                <td>{{ task[4] }}</td>
+                <td>{{ task[5] }}</td>
+                <td>{{ task[6] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
